@@ -1,0 +1,213 @@
+<div class="main-content" >
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+            <div class="card">
+                <div class="header">
+                    <h4 class="title">Choose Criteria</h4>
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Kriteria</label>
+                                <select class="form-control" id="criteriaId"    [(ngModel)]="criteria">
+                                    <option value="1">Kriteria 1</option>
+                                    <option value="2">Kriteria 2</option>
+                                    <option value="3">Kriteria 3</option>
+                                    <option value="4">Kriteria 4</option>
+                                    <option value="5">Kriteria 5</option>
+                                    <option value="6">Kriteria 6</option>
+                                    <option value="7">Kriteria 7</option>
+                                    <option value="8">Kriteria 8</option>
+                                    <option value="9">Kriteria 9</option>
+                                    <option value="10">Kriteria 10</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Details</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Kriteria</label>
+                                        <select class="form-control" >
+                                            <option value="1">Kriteria 1</option>
+                                            <option value="2">Kriteria 2</option>
+                                            <option value="3">Kriteria 3</option>
+                                            <option value="4">Kriteria 4</option>
+                                            <option value="5">Kriteria 5</option>
+                                            <option value="6">Kriteria 6</option>
+                                            <option value="7">Kriteria 7</option>
+                                            <option value="8">Kriteria 8</option>
+                                            <option value="9">Kriteria 9</option>
+                                            <option value="10">Kriteria 10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Title </label>
+                                        <input type="text" class="form-control" placeholder="Title" value="">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Requirement</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                            <span class="input-group-btn">
+                                              <button class="btn btn-default" type="submit">
+                                                  <i class="fa fa-plus"></i>
+                                              </button>
+                                            </span>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Update Details</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Details Preview</h4>
+                    </div>
+                    <div class="content">
+                        <p>Preview of the Details</p>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                  <tbody>
+                                      <tr *ngFor="let det of detail" >
+                                          <td *ngIf="criteria==det.kriteria" >{{det.title}}
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" *ngFor="let y of det.requirement" >
+                                                    {{y}}</li>
+                                              </ul>
+
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                            </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Questions</h4>
+                    </div>
+                    <div class="content">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>User</label>
+                                        <div class="form-check" >
+                                            <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input"  type="checkbox" value="Dosen" id="defaultCheck1">
+                                            Default checkbox</label>
+                                        </div>
+                                        <div class="form-check" >
+                                            <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input"  type="checkbox" value="Dosen" id="defaultCheck1">
+                                            Default checkbox</label>
+                                        </div>
+                                        <div class="form-check" >
+                                            <label class="form-check-label" for="defaultCheck1">
+                                            <input class="form-check-input"  type="checkbox" value="Dosen" id="defaultCheck1">
+                                            Default checkbox</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Question</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Bobot</label>
+                                        <input type="text" class="form-control" placeholder="Bobot" value="">
+                                    </div>
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="form-group">
+                                        <label>Options</label>
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="options...">
+                                            <span class="input-group-btn">
+                                              <button class="btn btn-default" type="submit">
+                                                  <i class="fa fa-plus"></i>
+                                              </button>
+                                            </span>
+                                          </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info btn-fill pull-right">Update Questions</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Questions Preview</h4>
+                    </div>
+                    <div class="content">
+                        <p>Preview of the Questions</p>
+                        <div class="content table-responsive table-full-width">
+                            <table class="table table-hover table-striped">
+                                  <tbody>
+                                      <tr *ngFor="let row of pertanyaan, index as i">
+                                          <td *ngIf="criteria==row.kriteria" >{{i+1}}. {{row.question}}
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item" *ngFor="let x of row.option;index as c" >
+                                                    <span class="badge badge-pill badge-info">{{row.bobot[c]}}</span>
+                                                    {{x}}</li>
+                                              </ul>
+
+                                          </td>
+                                      </tr>
+                                  </tbody>
+                            </table>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
